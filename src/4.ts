@@ -19,7 +19,6 @@ abstract class House {
   constructor(public door: boolean, protected key: Key) {}
 
   public comeIn(person: Person) {
-    // const person = new Person(key);
     if (this.door === true) {
       this.tenants.push(person);
     }
@@ -32,7 +31,6 @@ class MyHouse extends House {
   constructor(key: Key, door: boolean) {
     super(door, key);
     this.openDoor(key);
-    // this.door = this.door;
   }
   openDoor(key: Key) {
     if (key.getSignature() === this.key.getSignature()) {
