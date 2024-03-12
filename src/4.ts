@@ -1,46 +1,45 @@
 class Key {
-    constructor(private signature: number)
-  
-    getSignature(signature: number) {
-        return signature =Math.random().
-    }
+  constructor(private signature: number) {}
+
+  public getSignature(signature: number) {
+    return signature;
+  }
 }
 
 class Person {
-    constructor(public name: string, public age: number, Key: number) {
-        
-        privat this.Key=key
-    }
-  greet(phrase: string): void {
-    console.log(phrase + ", мене звати " + this.name);
-  }
-  getKey(key: number) {
+  constructor(private key: Key) {}
+ 
+  getKey(key: Key) {
     return key;
   }
 }
 
 abstract class House {
-    constructor(public door: boolean, Key:number)
   private tenants: Person[] = [];
+  constructor(public door: boolean, key: Key) {}
 
-  comeIn(name: string) {
-      const person = new Person(key);
-      if (this.door===true)
-    this.tenants.push(person);
+  public comeIn(person: Person) {
+    // const person = new Person(key);
+    if (this.door === true) {
+      this.tenants.push(person);
     }
-    abstract OpenDoor(Key:number){}
+  }
+
+ public abstract openDoor(key: Key) {}
 }
 
 class MyHouse extends House() {
-    openDoor() {
-        if (key === key)
-            this.openDoor === true;
+  constructor() {
+    super();
+  }
+  openDoor(person.getKey()) {
+    if (key === key) {
+      this.door === true;
     }
+  }
 }
 
-
-
-const key = new Key();
+const key = new Key(Math.random());
 
 const house = new MyHouse(key);
 const person = new Person(key);
