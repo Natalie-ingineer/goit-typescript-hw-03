@@ -34,7 +34,7 @@ class MyHouse extends House {
   }
   openDoor(key: Key) {
     if (key.getSignature() === this.key.getSignature()) {
-      this.door === true;
+      this.door = true;
     }
   }
 }
